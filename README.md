@@ -11,3 +11,6 @@ This is a tool that I use during class to generate a "random" student name so th
 ## Frameworks/libraries:
 * jQuery
 * Bootstrap 
+
+## URL:
+https://edorsini.github.io/random-student-generator/
