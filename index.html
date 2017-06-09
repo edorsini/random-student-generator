@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -8,24 +9,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-    var students = ['Andrew', 'Danny', 'Dylan', 'Kelsey', 'Mehdi', 'Pei', 'Stacy', 'Colin', 'David', 'Hongsyn', 'Kirk', 'Melissa', 'Robert', 'Thomas', 'Daniel', 'Don', 'Jamie', 'Matthew', 'Michael', 'Ross', 'Zack'];
-
-    var images = ['andrew.png', 'danny.png', 'dylan.png', 'kelsey.png', 'mehdi.png', 'pei.png', 'stacy.png', 'colin.png', 'david.png', 'hongsyn.jpeg', 'kirk.jpeg', 'melissa.png', 'robert.png', 'thomas.jpeg', 'daniel.png', 'don.png', 'jamie.jpeg', 'matthew.png', 'michael.png', 'ross.png', 'zack.png'];
-
-    $(document).ready(function() {
-        $("#ask").click(function() {
-            var index = Math.floor(Math.random() * students.length);
-            var student = students[index];
-            var image = images[index];
-            $(".student-name").text(student);
-            $(".student-name").removeClass('hide');
-            $(".student-image").removeClass('hide');
-            $(".thank-you").removeClass('hide');
-            $(".img-circle").attr("src", "./images/" + image);
-        });
-    });
-    </script>
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
@@ -34,9 +18,9 @@
             <h3 class="text-muted">Ask For Help</h3>
         </div>
         <div class="jumbotron">
-            <h1 class="student-name hide">Lucas</h1>
+            <h1 class="student-name hide"></h1>
             <div class="student-image hide pull-right"><img src="" class="img-circle" width="100px"></div>
-            <p class="lead thank-you hide">Thank you for helping me out, <span class="student-name">Lucas</span>!</p>
+            <p class="lead thank-you hide">Thank you for helping me out, <span class="student-name"></span>!</p>
             <p><a class="btn btn-lg btn-success" href="#" role="button" id="ask">Randomly Ask For Help</a></p>
         </div>
         <footer class="footer">
