@@ -1,6 +1,6 @@
-    var students = ['Andrew', 'Danny', 'Dylan', 'Kelsey', 'Mehdi', 'Pei', 'Stacy', 'David', 'Hongsyn', 'Kirk', 'Melissa', 'Robert', 'Thomas', 'Daniel', 'Don', 'Jamie', 'Matthew', 'Michael', 'Ross', 'Zack'];
+    var students = ['Danny', 'Kelsey', 'Mehdi', 'Pei', 'David', 'Hongsyn', 'Kirk', 'Melissa', 'Robert', 'Thomas', 'Daniel', 'Don', 'Jamie', 'Matthew', 'Michael', 'Ross', 'Zack'];
 
-    var images = ['andrew.png', 'danny.png', 'dylan.png', 'kelsey.png', 'mehdi.png', 'pei.png', 'stacy.png', 'david.png', 'hongsyn.jpeg', 'kirk.jpeg', 'melissa.png', 'robert.png', 'thomas.jpeg', 'daniel.png', 'don.png', 'jamie.jpeg', 'matthew.png', 'michael.png', 'ross.png', 'zack.png'];
+    var images = ['danny.png', 'kelsey.png', 'mehdi.png', 'pei.png', 'david.png', 'hongsyn.jpeg', 'kirk.jpeg', 'melissa.png', 'robert.jpeg', 'thomas.jpeg', 'daniel.png', 'don.png', 'jamie.jpeg', 'matthew.jpeg', 'michael.png', 'ross.png', 'zack.png'];
 
     $(document).ready(function() {
         $("#ask").click(function() {
