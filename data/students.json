@@ -1,56 +1,56 @@
 {
     students: [{
-        'name': 'Danny',
-        'image': 'danny.png'
+        "name": "Danny",
+        "image": "danny.png"
     }, {
-        'name': 'Kelsey',
-        'image': 'kelsey.png'
+        "name": "Kelsey",
+        "image": "kelsey.png"
     }, {
-        'name': 'Mehdi',
-        'image': 'mehdi.png'
+        "name": "Mehdi",
+        "image": "mehdi.png"
     }, {
-        'name': 'Pei',
-        'image': 'pei.png'
+        "name": "Pei",
+        "image": "pei.png"
     }, {
-        'name': 'David',
-        'image': 'david.png'
+        "name": "David",
+        "image": "david.png"
     }, {
-        'name': 'Hongsyn',
-        'image': 'hongsyn.jpeg'
+        "name": "Hongsyn",
+        "image": "hongsyn.jpeg"
     }, {
-        'name': 'Kirk',
-        'image': 'kirk.jpeg'
+        "name": "Kirk",
+        "image": "kirk.jpeg"
     }, {
-        'name': 'Melissa',
-        'image': 'melissa.png'
+        "name": "Melissa",
+        "image": "melissa.png"
     }, {
-        'name': 'Robert',
-        'image': 'robert.jpeg'
+        "name": "Robert",
+        "image": "robert.jpeg"
     }, {
-        'name': 'Thomas',
-        'image': 'thomas.jpeg'
+        "name": "Thomas",
+        "image": "thomas.jpeg"
     }, {
-        'name': 'Daniel',
-        'image': 'daniel.png'
+        "name": "Daniel",
+        "image": "daniel.png"
     }, {
-        'name': 'Don',
-        'image': 'don.png'
+        "name": "Don",
+        "image": "don.png"
     }, {
-        'name': 'Jamie',
-        'image': 'jamie.jpeg'
+        "name": "Jamie",
+        "image": "jamie.jpeg"
     }, {
-        'name': 'Matthew',
-        'image': 'matthew.jpeg'
+        "name": "Matthew",
+        "image": "matthew.jpeg"
     }, {
-        'name': 'Michael',
-        'image': 'michael.png'
+        "name": "Michael",
+        "image": "michael.png"
     }, {
-        'name': 'Ross',
-        'image': 'ross.png'
+        "name": "Ross",
+        "image": "ross.png"
     }, {
-        'name': 'Zack',
-        'image': 'zack.png'
+        "name": "Zack",
+        "image": "zack.png"
     }],
-    'year': 2017,
-    'university': 'University of New Hampshire'
+    "year": 2017,
+    "university": "University of New Hampshire"
 }
