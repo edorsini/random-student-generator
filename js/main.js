@@ -4,12 +4,18 @@
 
     var pickedOn = [];
 
-    $(document).ready(function() {
+
+    var items = [];
+
+    $(document).ready(function () {
         var index;
         var student;
         var count = 0;
 
-        $("#ask").click(function() {
+        $("#ask").click(function () {
+
+            getStudents();
+
             if (count === students.length) {
                 alert("You have picked on everyone today.  Please refresh the page to start again.");
                 return;
@@ -50,6 +56,21 @@
                 count++;
                 return false;
             }
+        }
+
+        function getStudents() {
+            $.getJSON("data/student.json", function (data) {
+
+                // $.each(data, function (key, val) {
+                //     items.push("<li id='" + key + "'>" + val + "</li>");
+                // });
+
+                // $("<ul/>", {
+                //     "class": "my-new-list",
+                //     html: items.join("")
+                // }).appendTo("body");
+                items = data;
+            });
         }
 
     });
