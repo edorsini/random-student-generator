@@ -1,5 +1,5 @@
 {
-    students: [{
+    "students": [{
         "name": "Danny",
         "image": "danny.png"
     }, {
