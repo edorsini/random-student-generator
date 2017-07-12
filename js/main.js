@@ -59,7 +59,7 @@
         }
 
         function getStudents() {
-            $.getJSON("data/student.json", function (data) {
+            $.getJSON("data/students.json", function (data) {
 
                 // $.each(data, function (key, val) {
                 //     items.push("<li id='" + key + "'>" + val + "</li>");
