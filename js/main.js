@@ -10,7 +10,7 @@
         var student;
         var count = 0;
 
-        getStudents();
+        initialize();
 
         $("#ask").click(function () {
 
@@ -29,7 +29,7 @@
 
             }
 
-            console.log(pickedOn);
+            console.log("pickedOn array: " + pickedOn);
 
             //var image = images[index].image;
             $(".student-name").text(student.name);
@@ -69,6 +69,10 @@
                 // }).appendTo("body");
                 students = data.students;
             });
+        }
+
+        function initialize() {
+            getStudents();
         }
 
     });
