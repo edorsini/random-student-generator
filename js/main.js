@@ -14,6 +14,7 @@ $(document).ready(function () {
 
         var numberPerTeam = $(this).text();
         var numberOfTeams = Math.round(students.length / parseInt(numberPerTeam));
+        console.log(numberOfTeams);
         var indexTemp = 0;
 
         // shuffle students
