@@ -5,10 +5,11 @@
     var students = [];
     var pickedOn = [];
 
+    var index;
+    var student;
+    var count = 0;
+
     $(document).ready(function () {
-        var index;
-        var student;
-        var count = 0;
 
         initialize();
 
@@ -19,13 +20,13 @@
                 return;
             }
 
-            var pickedOnStudentAlreadyFlag = true;
+            var pickedOnStudentAlreadyFlag = false;
 
-            while (pickedOnStudentAlreadyFlag === true && count < students.length) {
+            while (pickedOnStudentAlreadyFlag === false && count < students.length) {
                 index = generateStudentIndex();
                 student = students[index];
                 console.log("student = " + student.name);
-                pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student.name);
+                pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student);
 
             }
 
@@ -47,12 +48,12 @@
         function pickedOnStudentAlready(student) {
             if (pickedOn.includes(student.name)) {
                 console.log("found student!");
-                return true;
+                return false;
             } else {
                 console.log("didn't find student");
                 pickedOn.push(student.name);
                 count++;
-                return false;
+                return true;
             }
         }
 
