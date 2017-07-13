@@ -14,13 +14,18 @@ $(document).ready(function () {
 
         var numberPerTeam = $(this).text();
         var numberOfTeams = students.length / parseInt(numberPerTeam);
+        var indexTemp = 0;
 
         // shuffle students
         students.shuffle();
 
-        // create n teams
+        // create <div> for each team
         for (var i = 1; i < numberOfTeams; i++) {
             $(".teams-container").append("<div class='team-" + (i) + "'>Team " + (i) + "</div>");
+            // add students to each team
+            for (var indexTemp; j < numberOfTeams; indexTemp++) {
+                $(".team-" + i).append("<div class='student'>" + students[j] + "</div>");
+            }
         }
 
     });
