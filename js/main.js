@@ -20,6 +20,7 @@ $(document).ready(function () {
 
         while (pickedOnStudentAlreadyFlag === false && count < students.length) {
             index = generateStudentIndex();
+            alert("index chosen: " + index);
             student = students[index];
             console.log("student = " + student.name);
             pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student);
@@ -40,7 +41,7 @@ $(document).ready(function () {
         var rand = Math.random();
         console.log("Math random number: " + rand);
         console.log("multiplied value: " + (rand * students.length));
-        return Math.floor(Math.random() * students.length);
+        return Math.floor(rand * students.length);
     }
 
     function pickedOnStudentAlready(student) {
