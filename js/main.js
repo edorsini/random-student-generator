@@ -34,7 +34,7 @@ $(document).ready(function () {
 
             // add the last students to the last team
             for (indexTemp; indexTemp < students.length; indexTemp++) {
-                alert("gets here, left: " + (students.length - indexTemp) + "add: " + students[indexTemp].name);
+                alert("gets here, left: " + (students.length - indexTemp) + ", add: " + students[indexTemp].name + ' --' + numberOfTeams);
                 $(".team-" + numberOfTeams).append("<div class='student'>" + students[indexTemp].name + "</div>");
             }
         }
