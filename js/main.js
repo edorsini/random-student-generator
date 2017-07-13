@@ -41,6 +41,7 @@ $(document).ready(function () {
         var rand = Math.random();
         console.log("Math random number: " + rand);
         console.log("multiplied value: " + (rand * students.length));
+        console.log("floored value: " + Math.floor(rand * students.length));
         return Math.floor(rand * students.length);
     }
 
