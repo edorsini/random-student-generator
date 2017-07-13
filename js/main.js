@@ -9,8 +9,20 @@ $(document).ready(function () {
 
     initialize();
 
-    $(".create-teams li").click(function () {
-        alert("gets here");
+    $(".create-teams li a").click(function () {
+        $(".teams-container").empty();
+
+        var numberPerTeam = $(this).text();
+        var numberOfTeams = students.length / parseInt(numberPerTeam);
+
+        // shuffle students
+        students.shuffle();
+
+        // create n teams
+        for (var i = 0; i < numberOfTeams; i++) {
+            $(".teams-container").append("<div class='team-" + (i + 1) + "'>Team " + (i + 1) + "</div>");
+        }
+
     });
 
     $("#ask").click(function () {
