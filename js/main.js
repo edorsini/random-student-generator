@@ -19,8 +19,8 @@ $(document).ready(function () {
         students.shuffle();
 
         // create n teams
-        for (var i = 0; i < numberOfTeams; i++) {
-            $(".teams-container").append("<div class='team-" + (i + 1) + "'>Team " + (i + 1) + "</div>");
+        for (var i = 1; i < numberOfTeams; i++) {
+            $(".teams-container").append("<div class='team-" + (i) + "'>Team " + (i) + "</div>");
         }
 
     });
