@@ -20,7 +20,7 @@ $(document).ready(function () {
 
         while (pickedOnStudentAlreadyFlag === false && count < students.length) {
             index = generateStudentIndex();
-            alert("index chosen: " + index);
+            console.log("index chosen: " + index);
             student = students[index];
             console.log("student = " + student.name);
             pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student);
