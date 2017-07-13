@@ -47,10 +47,10 @@
 
         function pickedOnStudentAlready(student) {
             if (pickedOn.includes(student.name)) {
-                console.log("found student!");
+                console.log("found student! " + student.name);
                 return false;
             } else {
-                console.log("didn't find student");
+                console.log("didn't find student: " + student.name);
                 pickedOn.push(student.name);
                 count++;
                 return true;
