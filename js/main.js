@@ -24,7 +24,7 @@ $(document).ready(function () {
             $(".teams-container").append("<div class='team-" + (i) + "'>Team " + (i) + "</div>");
             // add students to each team
             for (var indexTemp; indexTemp < numberOfTeams; indexTemp++) {
-                $(".team-" + i).append("<div class='student'>" + students[j] + "</div>");
+                $(".team-" + i).append("<div class='student'>" + students[indexTemp] + "</div>");
             }
         }
 
