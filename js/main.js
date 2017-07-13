@@ -29,6 +29,10 @@ $(document).ready(function () {
             }
         }
 
+        if (indexTemp < students.length) {
+            alert("indexTemp is: " + indexTemp);
+        }
+
     });
 
     $("#ask").click(function () {
