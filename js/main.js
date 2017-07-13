@@ -9,6 +9,10 @@ $(document).ready(function () {
 
     initialize();
 
+    $(".create-teams li").click(function () {
+        alert("gets here");
+    });
+
     $("#ask").click(function () {
 
         if (count === students.length) {
