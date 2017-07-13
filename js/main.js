@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(".teams-container").empty();
 
         var numberPerTeam = $(this).text();
-        var numberOfTeams = students.length / parseInt(numberPerTeam);
+        var numberOfTeams = Math.floor(students.length / parseInt(numberPerTeam));
         var indexTemp = 0;
 
         // shuffle students
