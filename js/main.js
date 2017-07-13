@@ -21,7 +21,7 @@ $(document).ready(function () {
         students.shuffle();
 
         // create <div> for each team
-        for (var i = 1; i < numberOfTeams; i++) {
+        for (var i = 1; i <= numberOfTeams; i++) {
             $(".teams-container").append("<div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div>");
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
