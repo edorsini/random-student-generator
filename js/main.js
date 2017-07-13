@@ -31,6 +31,11 @@ $(document).ready(function () {
 
         if (indexTemp < students.length) {
             alert("indexTemp is: " + indexTemp);
+
+            // add the last students to the last team
+            for (indexTemp; indexTemp < students.length; indexTemp++) {
+                $(".team-" + numberOfTeams).append("<div class='student'>" + students[indexTemp].name + "</div>");
+            }
         }
 
     });
