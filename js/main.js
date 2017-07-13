@@ -30,11 +30,11 @@ $(document).ready(function () {
                 var ulEnd = '';
 
                 if (j === 0) {
-                    ulStart = '<ul class="list-group">';
+                    //ulStart = '<ul class="list-group">';
                 }
 
                 if (j === 3) {
-                    ulEnd = '</ul>';
+                    //ulEnd = '</ul>';
                 }
 
                 $(".team-" + i).append(ulStart + '<li class="list-group-item">' + students[indexTemp].name + '</li>' + ulEnd);
