@@ -13,7 +13,7 @@ $(document).ready(function () {
         $(".teams-container").empty();
 
         var numberPerTeam = $(this).text();
-        var numberOfTeams = Math.round(students.length / parseInt(numberPerTeam));
+        var numberOfTeams = parseInt(students.length / parseInt(numberPerTeam));
         console.log('number of teams: ' + numberOfTeams);
         var indexTemp = 0;
 
