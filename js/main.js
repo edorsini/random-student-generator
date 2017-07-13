@@ -43,17 +43,6 @@ $(document).ready(function () {
             }
         }
 
-        /*
-
-<ul class="list-group">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-
-        */
 
         if (indexTemp < students.length) {
             console.log("indexTemp is: " + indexTemp);
@@ -61,7 +50,7 @@ $(document).ready(function () {
             // add the last students to the last team
             for (indexTemp; indexTemp < students.length; indexTemp++) {
                 console.log("gets here, left: " + (students.length - indexTemp) + ", add: " + students[indexTemp].name + ' --' + numberOfTeams);
-                $(".team-" + numberOfTeams).append("<div class='student'>" + students[indexTemp].name + "</div>");
+                $(".team-" + numberOfTeams).append('<li class="list-group-item">' + students[indexTemp].name + '</li>');
             }
         }
 
