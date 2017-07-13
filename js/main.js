@@ -26,10 +26,34 @@ $(document).ready(function () {
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
                 console.log("indexTemp: " + indexTemp);
-                $(".team-" + i).append("<div class='student'>" + students[indexTemp].name + "</div>");
+                var ulStart = '';
+                var ulEnd = '';
+
+                if (j === 0) {
+                    ulStart = '<ul class="list-group">';
+                }
+
+                if (j === 3) {
+                    ulEnd = '</ul>';
+                }
+
+                $(".team-" + i).append(ulStart + '<li class="list-group-item">' + students[indexTemp].name + '</li>' + ulEnd);
                 indexTemp++;
+
             }
         }
+
+        /*
+
+<ul class="list-group">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+
+        */
 
         if (indexTemp < students.length) {
             console.log("indexTemp is: " + indexTemp);
