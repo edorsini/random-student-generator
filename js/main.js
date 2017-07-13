@@ -36,7 +36,7 @@ $(document).ready(function () {
 
             // add the last students to the last team
             for (indexTemp; indexTemp < students.length; indexTemp++) {
-                alert("gets here, left: " + (students.length - indexTemp) + ", add: " + students[indexTemp].name + ' --' + numberOfTeams);
+                console.log("gets here, left: " + (students.length - indexTemp) + ", add: " + students[indexTemp].name + ' --' + numberOfTeams);
                 $(".team-" + numberOfTeams).append("<div class='student'>" + students[indexTemp].name + "</div>");
             }
         }
@@ -70,7 +70,6 @@ $(document).ready(function () {
         $(".thank-you").removeClass('hide');
     });
 
-
     function generateStudentIndex() {
         var rand = Math.random();
         console.log("Math random number: " + rand);
@@ -93,15 +92,6 @@ $(document).ready(function () {
 
     function getStudents() {
         $.getJSON("data/students.json", function (data) {
-
-            // $.each(data, function (key, val) {
-            //     items.push("<li id='" + key + "'>" + val + "</li>");
-            // });
-
-            // $("<ul/>", {
-            //     "class": "my-new-list",
-            //     html: items.join("")
-            // }).appendTo("body");
             students = data.students;
         });
     }
