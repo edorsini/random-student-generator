@@ -83,6 +83,14 @@ $(document).ready(function() {
 
 
     /**
+     * Event listener: When `SAVE` button is clicked of absent form
+     */
+    $(".save-absent").click(function() {
+
+        alert("Save students that are absent");
+    });
+
+    /**
      * Get image from GIPHY API
      */
     function getImageFromAPI() {
