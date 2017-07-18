@@ -5,11 +5,11 @@ var index;
 var student;
 var count = 0;
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     initialize();
 
-    $(".create-teams li a").click(function () {
+    $(".create-teams li a").click(function() {
         $(".teams-container").empty();
 
         var numberPerTeam = $(this).text();
@@ -20,9 +20,9 @@ $(document).ready(function () {
         // shuffle students
         students.shuffle();
 
-        // create <div> for each team
+        // create <div> for each team within the .team-container <div>
         for (var i = 1; i <= numberOfTeams; i++) {
-            $(".teams-container").append("<div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div>");
+            $(".teams-container").append("<div class='row'><div class='col-md-6'><div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div></div></div>");
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
                 console.log("indexTemp: " + indexTemp);
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     });
 
-    $("#ask").click(function () {
+    $("#ask").click(function() {
 
         if (count === students.length) {
             alert("You have picked on everyone today.  Please refresh the page to start again.");
@@ -104,7 +104,7 @@ $(document).ready(function () {
     }
 
     function getStudents() {
-        $.getJSON("data/students.json", function (data) {
+        $.getJSON("data/students.json", function(data) {
             students = data.students;
         });
     }
@@ -113,7 +113,7 @@ $(document).ready(function () {
         getStudents();
     }
 
-    Array.prototype.shuffle = function () {
+    Array.prototype.shuffle = function() {
         var input = this;
 
         for (var i = input.length - 1; i >= 0; i--) {
