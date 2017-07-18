@@ -22,13 +22,13 @@ $(document).ready(function() {
         var bootstrapSize = 0;
 
         switch (numberPerTeam) {
-            case 2:
+            case "2":
                 bootstrapSize = 6;
                 break;
-            case 3:
+            case "3":
                 bootstrapSize = 4;
                 break;
-            case 4:
+            case "4":
                 bootstrapSize = 3;
                 break;
             default:
