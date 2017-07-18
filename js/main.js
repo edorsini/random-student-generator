@@ -9,6 +9,9 @@ $(document).ready(function() {
 
     initialize();
 
+    /**
+     * Event listener: When `CREATE TEAMS` button is clicked
+     */
     $(".create-teams li a").click(function() {
         $(".teams-container").empty();
 
@@ -22,7 +25,7 @@ $(document).ready(function() {
 
         // create <div> for each team within the .team-container <div>
         for (var i = 1; i <= numberOfTeams; i++) {
-            $(".teams-container").append("<div class='row'><div class='col-md-6'><div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div></div></div>");
+            $(".teams-container").append("<div class='col-md-6'><div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div></div>");
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
                 console.log("indexTemp: " + indexTemp);
@@ -56,6 +59,9 @@ $(document).ready(function() {
 
     });
 
+    /**
+     * Event listener: When `ASK` button is clicked
+     */
     $("#ask").click(function() {
 
         if (count === students.length) {
@@ -83,6 +89,9 @@ $(document).ready(function() {
         $(".thank-you").removeClass('hide');
     });
 
+    /**
+     * Generate a random student object from array of student objects
+     */
     function generateStudentIndex() {
         var rand = Math.random();
         console.log("Math random number: " + rand);
@@ -91,6 +100,9 @@ $(document).ready(function() {
         return Math.floor(rand * students.length);
     }
 
+    /**
+     * Determine if the student has been picked on already
+     */
     function pickedOnStudentAlready(student) {
         if (pickedOn.includes(student.name)) {
             console.log("found student! " + student.name);
@@ -103,12 +115,18 @@ $(document).ready(function() {
         }
     }
 
+    /**
+     * Get students from JSON file
+     */
     function getStudents() {
         $.getJSON("data/students.json", function(data) {
             students = data.students;
         });
     }
 
+    /**
+     * Initialize wrapper function
+     */
     function initialize() {
         getStudents();
     }
