@@ -21,21 +21,19 @@ $(document).ready(function() {
         var indexTemp = 0;
         var bootstrapSize = 0;
 
-        switch (numberPerTeam) {
-            case "2":
-                bootstrapSize = 6;
+        switch (parseInt(numberPerTeam)) {
+            case 2:
+                bootstrapSize = 2; // good
                 break;
-            case "3":
-                bootstrapSize = 4;
-                break;
-            case "4":
+            case 3:
                 bootstrapSize = 3;
+                break;
+            case 4:
+                bootstrapSize = 3; // good
                 break;
             default:
                 bootstrapSize = 12;
         }
-
-        alert(bootstrapSize);
 
         // shuffle students
         students.shuffle();
