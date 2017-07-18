@@ -80,10 +80,18 @@ $(document).ready(function() {
     });
 
     /**
-     * Checks if a particular student is absent
+     * Removes absent students from array of students
      */
-    function isStudentAbsent(student) {
-        return absentStudents.includes(student);
+    function removeAbsentStudents() {
+        absentStudents = JSON.parse(absentStudents);
+
+        for (var i = 0; i < absentStudents.length; i++) {
+            var index = students.indexOf(absentStudents[i]);
+            if (index > -1) {
+                students.splice(index, 1);
+            }
+        }
+
     }
 
     /**
@@ -100,6 +108,9 @@ $(document).ready(function() {
 
         // save to local storage
         localStorage.setItem("absentStudents", JSON.stringify(tempArray));
+
+        // remove absent students from array of students
+        removeAbsentStudents();
     });
 
     /**
