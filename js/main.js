@@ -76,6 +76,7 @@ $(document).ready(function() {
 
         if (student.image === 'none') {
             alert("get image from API");
+            student.image = getImageFromAPI();
         }
 
         $(".img-circle").attr("src", "./images/" + student.image);
@@ -83,6 +84,19 @@ $(document).ready(function() {
         $(".student-image").removeClass('hide');
         $(".thank-you").removeClass('hide');
     });
+
+
+    function getImageFromAPI() {
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=developer&limit=1&api_key=dc6zaTOxFJmzC";
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+        }).done(function(response) {
+            console.log(response);
+            var imageURL = response.data[0].images.original.url;
+            return imageURL;
+        });
+    }
 
     /**
      * Determine what the bootstrap size should be for each team <div>
