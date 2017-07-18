@@ -87,8 +87,6 @@ $(document).ready(function() {
      */
     $(".save-absent").click(function() {
         var tempArray = [];
-        alert("Save students that are absent");
-        //console.dir($('.studentName:checkbox:checked'));
 
         $("input:checkbox:checked").each(function() {
             tempArray.push($(this).val());
@@ -97,6 +95,7 @@ $(document).ready(function() {
         console.log(tempArray);
 
         // save to local storage
+        localStorage.setItem("absentStudents", JSON.stringify(tempArray));
     });
 
     /**
