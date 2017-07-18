@@ -87,7 +87,7 @@ $(document).ready(function() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
 
-        students = studentsFullList;
+        students = studentsFullList.clone();
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
@@ -238,5 +238,9 @@ $(document).ready(function() {
         }
         return input;
     }
+
+    Array.prototype.clone = function() {
+        return this.slice(0);
+    };
 
 });
