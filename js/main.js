@@ -195,11 +195,20 @@ $(document).ready(function() {
         });
     }
 
+    function compare(a, b) {
+        if (a.name < b.name)
+            return -1;
+        if (a.name > b.name)
+            return 1;
+        return 0;
+    }
+
     /**
      * Populates the modal for setting students as absent
      */
     function populateAbsentModal() {
-        students.sort();
+        students.sort(compare);
+
         for (var i = 0; i < students.length; i++) {
             $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><div class='checkbox'><label><input class='studentName' type='checkbox' value='" + students[i].name + "'>" + students[i].name + "</label></div></li></div>");
         }
