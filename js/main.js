@@ -159,7 +159,7 @@ $(document).ready(function() {
      */
     function populateAbsentModal() {
         for (var i = 0; i < students.length; i++) {
-            $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><label><input type='checkbox' value='" + students[i].name + "'>" + students[i].name + "</label></li></div>");
+            $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><div class='checkbox'><label><input type='checkbox' value='" + students[i].name + "'>" + students[i].name + "</label></div></li></div>");
         }
     }
 
