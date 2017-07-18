@@ -83,7 +83,8 @@ $(document).ready(function() {
      * Removes absent students from array of students
      */
     function removeAbsentStudents() {
-        absentStudents = JSON.parse(absentStudents);
+        var retrievedData = localStorage.getItem("absentStudents");
+        absentStudents = JSON.parse(retrievedData);
 
         for (var i = 0; i < absentStudents.length; i++) {
             var index = students.indexOf(absentStudents[i]);
