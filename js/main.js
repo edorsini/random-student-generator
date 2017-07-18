@@ -20,6 +20,7 @@ $(document).ready(function() {
         console.log('number of teams: ' + numberOfTeams);
         var indexTemp = 0;
         var bootstrapSize = 0;
+        alert(numberPerTeam);
 
         switch (numberPerTeam) {
             case 2:
