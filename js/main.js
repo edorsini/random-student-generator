@@ -86,12 +86,15 @@ $(document).ready(function() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
 
+        var filteredStudents = [];
+
+
         for (var i = 0; i < absentStudents.length; i++) {
-            var index = students.indexOf(absentStudents[i]);
-            if (index > -1) {
-                students.splice(index, 1);
-            }
+            const nameToRemove = absentStudents[i];
+            filteredStudents = students.filter((item) => item.name !== nameToRemove);
         }
+
+        students = filteredStudents;
 
     }
 
