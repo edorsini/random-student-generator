@@ -86,17 +86,17 @@ $(document).ready(function() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
 
-        var filteredStudents = [];
-
-
-        for (var i = 0; i < absentStudents.length; i++) {
-            var nameToRemove = absentStudents[i];
-            console.log("remove: " + absentStudents[i]);
-            filteredStudents = students.filter((item) => item.name !== nameToRemove);
-            console.dir(filteredStudents);
+        for (var i = 0; i < students.length; i++) {
+            for (var j = 0; j < absentStudents.length; j++) {
+                var nameToRemove = absentStudents[i];
+                if (students[i].name === nameToRemove) {
+                    var removedObject = students.splice(i, 1);
+                    removedObject = null;
+                    break;
+                }
+            }
         }
-
-        students = filteredStudents;
+        console.dir(students);
     }
 
     /**
