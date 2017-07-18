@@ -150,6 +150,7 @@ $(document).ready(function() {
     function getStudents() {
         $.getJSON("data/students.json", function(data) {
             students = data.students;
+            populateAbsentModal();
         });
     }
 
@@ -173,7 +174,6 @@ $(document).ready(function() {
      */
     function initialize() {
         getStudents();
-        populateAbsentModal();
     }
 
     Array.prototype.shuffle = function() {
