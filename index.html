@@ -19,15 +19,29 @@
         <div class="header clearfix">
             <h3 class="text-muted">Ask For Help</h3>
         </div>
+        <!-- Jumbotron -->
         <div class="jumbotron">
             <h1 class="student-name hide"></h1>
             <div class="student-image hide pull-right"><img src="" class="img-circle" width="100px"></div>
             <p class="lead thank-you hide">Thank you for helping me out, <span class="student-name"></span>!</p>
             <p><a class="btn btn-lg btn-success" href="#" role="button" id="ask">Randomly Ask For Help</a></p>
         </div>
+        <!-- Create Teams, Mark student absent -->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-4">
                 <h3 class="text-muted">Create Teams:</h3>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Number of developers per team
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu create-teams">
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-muted">Mark student absent</h3>
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Number of developers per team
                         <span class="caret"></span></button>
@@ -40,8 +54,6 @@
             </div>
         </div>
         <div class="row teams-container">
-            <!-- <div class="col-md-12 teams-container">
-</div> -->
         </div>
         <footer class="footer">
             <p>&copy; Ed Orsini 2017</p>
