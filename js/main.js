@@ -73,7 +73,6 @@ $(document).ready(function() {
         $(".student-name").removeClass('hide');
 
         if (student.image === 'none') {
-            alert("get image from API");
             getImageFromAPI();
         } else {
             $(".img-circle").attr("src", "./images/" + student.image);
@@ -87,7 +86,7 @@ $(document).ready(function() {
      * Get image from GIPHY API
      */
     function getImageFromAPI() {
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=developer&limit=1&api_key=dc6zaTOxFJmzC";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=new&limit=1&api_key=dc6zaTOxFJmzC";
         $.ajax({
             url: queryURL,
             method: 'GET'
