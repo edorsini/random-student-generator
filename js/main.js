@@ -91,6 +91,7 @@ $(document).ready(function() {
 
         for (var i = 0; i < absentStudents.length; i++) {
             var nameToRemove = absentStudents[i];
+            console.log("remove: " + absentStudents[i]);
             filteredStudents = students.filter((item) => item.name !== nameToRemove);
         }
 
