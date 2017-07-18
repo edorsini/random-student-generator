@@ -93,6 +93,7 @@ $(document).ready(function() {
             var nameToRemove = absentStudents[i];
             console.log("remove: " + absentStudents[i]);
             filteredStudents = students.filter((item) => item.name !== nameToRemove);
+            console.dir(filteredStudents);
         }
 
         students = filteredStudents;
