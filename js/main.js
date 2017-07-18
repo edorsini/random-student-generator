@@ -158,7 +158,10 @@ $(document).ready(function() {
      */
     function populateAbsentModal() {
         alert("gets here 1");
+
         var i = 0;
+        alert(students.length);
+
         for (i = 0; i < students.length; i++) {
             alert("gets here 2");
             $(".modal-body").append("<div class='absent-student'>" + students[i].name + "</div>");
