@@ -1,4 +1,5 @@
 var students = [];
+var studentsFullList = [];
 var absentStudents = [];
 var pickedOn = [];
 
@@ -85,6 +86,8 @@ $(document).ready(function() {
     function removeAbsentStudents() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
+
+        students = studentsFullList;
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
@@ -191,6 +194,7 @@ $(document).ready(function() {
     function getStudents() {
         $.getJSON("data/students.json", function(data) {
             students = data.students;
+            studentsFullList = data.students;
             populateAbsentModal();
         });
     }
@@ -207,10 +211,10 @@ $(document).ready(function() {
      * Populates the modal for setting students as absent
      */
     function populateAbsentModal() {
-        students.sort(compare);
+        studentsFullList.sort(compare);
 
-        for (var i = 0; i < students.length; i++) {
-            $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><div class='checkbox'><label><input class='studentName' type='checkbox' value='" + students[i].name + "'>" + students[i].name + "</label></div></li></div>");
+        for (var i = 0; i < studentsFullList.length; i++) {
+            $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><div class='checkbox'><label><input class='studentName' type='checkbox' value='" + studentsFullList[i].name + "'>" + studentsFullList[i].name + "</label></div></li></div>");
         }
     }
 
