@@ -158,14 +158,8 @@ $(document).ready(function() {
      * Populates the modal for setting students as absent
      */
     function populateAbsentModal() {
-        alert("gets here 1");
-
-        var i = 0;
-        alert(students.length);
-
-        for (i = 0; i < students.length; i++) {
-            alert("gets here 2");
-            $(".modal-body").append("<div class='absent-student'>" + students[i].name + "</div>");
+        for (var i = 0; i < students.length; i++) {
+            $(".modal-body").append("<div class='absent-student'><input type='text' value='" + students[i].name + "'>" + students[i].name + "</div>");
         }
     }
 
