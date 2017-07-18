@@ -88,7 +88,7 @@ $(document).ready(function() {
      * Get image from GIPHY API
      */
     function getImageFromAPI() {
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=developer&limit=1&api_key=dc6zaTOxFJmzC";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=developer&limit=1&api_key=dc6zaTOxFJmzC";
         $.ajax({
             url: queryURL,
             method: 'GET'
