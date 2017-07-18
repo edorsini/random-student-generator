@@ -154,10 +154,20 @@ $(document).ready(function() {
     }
 
     /**
+     * Populates the modal for setting students as absent
+     */
+    function populateAbsentModal() {
+        for (var i = 0; i < students.length; i++) {
+            $(".modal-body").append("<div class='absent-student'>" + students[i].name + "</div>");
+        }
+    }
+
+    /**
      * Initialize wrapper function
      */
     function initialize() {
         getStudents();
+        populateAbsentModal();
     }
 
     Array.prototype.shuffle = function() {
