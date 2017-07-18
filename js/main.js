@@ -88,7 +88,7 @@ $(document).ready(function() {
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
-                var nameToRemove = absentStudents[i];
+                var nameToRemove = absentStudents[j];
                 if (students[i].name === nameToRemove) {
                     var removedObject = students.splice(i, 1);
                     removedObject = null;
