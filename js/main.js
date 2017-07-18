@@ -1,4 +1,5 @@
 var students = [];
+var absentStudents = [];
 var pickedOn = [];
 
 var index;
@@ -60,10 +61,7 @@ $(document).ready(function() {
         var pickedOnStudentAlreadyFlag = false;
 
         while (pickedOnStudentAlreadyFlag === false && count < students.length) {
-            index = generateStudentIndex();
-            console.log("index chosen: " + index);
-            student = students[index];
-            console.log("student = " + student.name);
+            student = getRandomStudent();
             pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student);
         }
 
@@ -81,6 +79,12 @@ $(document).ready(function() {
         $(".thank-you").removeClass('hide');
     });
 
+    /**
+     * Checks if a particular student is absent
+     */
+    function isStudentAbsent(student) {
+        return absentStudents.includes(student);
+    }
 
     /**
      * Event listener: When `SAVE` button is clicked of absent form
@@ -137,12 +141,17 @@ $(document).ready(function() {
     /**
      * Generate a random student object from array of student objects
      */
-    function generateStudentIndex() {
+    function getRandomStudent() {
         var rand = Math.random();
+        var index;
         console.log("Math random number: " + rand);
         console.log("multiplied value: " + (rand * students.length));
         console.log("floored value: " + Math.floor(rand * students.length));
-        return Math.floor(rand * students.length);
+        index = Math.floor(rand * students.length);
+        console.log("index chosen: " + index);
+        student = students[index];
+        console.log("student = " + student.name);
+        return student;
     }
 
     /**
