@@ -88,6 +88,8 @@ $(document).ready(function() {
         absentStudents = JSON.parse(retrievedData);
 
         students = studentsFullList.clone();
+        console.log('clone:');
+        console.dir(students);
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
