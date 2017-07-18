@@ -87,7 +87,7 @@ $(document).ready(function() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
 
-        students = studentsFullList.clone();
+        //students = studentsFullList.clone();
         //console.log('clone:');
         //console.dir(students);
 
