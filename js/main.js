@@ -65,7 +65,6 @@ $(document).ready(function() {
             student = students[index];
             console.log("student = " + student.name);
             pickedOnStudentAlreadyFlag = pickedOnStudentAlready(student);
-
         }
 
         console.log("pickedOn array: " + pickedOn);
@@ -75,8 +74,7 @@ $(document).ready(function() {
 
         if (student.image === 'none') {
             alert("get image from API");
-            student.image = getImageFromAPI();
-            $(".img-circle").attr("src", student.image);
+            getImageFromAPI();
         } else {
             $(".img-circle").attr("src", "./images/" + student.image);
         }
@@ -96,7 +94,7 @@ $(document).ready(function() {
         }).done(function(response) {
             console.log(response);
             var imageURL = response.data[0].images.original.url;
-            return imageURL;
+            $(".img-circle").attr("src", student.image);
         });
     }
 
