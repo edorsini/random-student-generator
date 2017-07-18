@@ -19,21 +19,7 @@ $(document).ready(function() {
         var numberOfTeams = parseInt(students.length / parseInt(numberPerTeam));
         console.log('number of teams: ' + numberOfTeams);
         var indexTemp = 0;
-        var bootstrapSize = 0;
-
-        switch (parseInt(numberPerTeam)) {
-            case 2:
-                bootstrapSize = 2; // good
-                break;
-            case 3:
-                bootstrapSize = 3;
-                break;
-            case 4:
-                bootstrapSize = 3; // good
-                break;
-            default:
-                bootstrapSize = 12;
-        }
+        var bootstrapSize = getBootstrapSize(numberPerTeam);
 
         // shuffle students
         students.shuffle();
@@ -44,20 +30,8 @@ $(document).ready(function() {
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
                 console.log("indexTemp: " + indexTemp);
-                var ulStart = '';
-                var ulEnd = '';
-
-                if (j === 0) {
-                    //ulStart = '<ul class="list-group">';
-                }
-
-                if (j === 3) {
-                    //ulEnd = '</ul>';
-                }
-
-                $(".team-" + i).append(ulStart + '<li class="list-group-item">' + students[indexTemp].name + '</li>' + ulEnd);
+                $(".team-" + i).append('<li class="list-group-item">' + students[indexTemp].name + '</li>');
                 indexTemp++;
-
             }
         }
 
@@ -103,6 +77,27 @@ $(document).ready(function() {
         $(".student-image").removeClass('hide');
         $(".thank-you").removeClass('hide');
     });
+
+    /**
+     * Determine what the bootstrap size should be for each team <div>
+     */
+    function getBootstrapSize(numberPerTeam) {
+        var bootstrapSize;
+        switch (parseInt(numberPerTeam)) {
+            case 2:
+                bootstrapSize = 2;
+                break;
+            case 3:
+                bootstrapSize = 3;
+                break;
+            case 4:
+                bootstrapSize = 3;
+                break;
+            default:
+                bootstrapSize = 12;
+        }
+        return bootstrapSize;
+    }
 
     /**
      * Generate a random student object from array of student objects
