@@ -91,7 +91,7 @@ $(document).ready(function() {
         //console.log('clone:');
         //console.dir(students);
 
-        vat newStudents = [];
+        var newStudents = [];
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
