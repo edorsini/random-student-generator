@@ -7,7 +7,8 @@ var index;
 var student;
 var count = 0;
 
-$(document).ready(function() {
+// Same as: $(document).ready(function() {
+$(function() {
 
     initialize();
 
@@ -86,10 +87,7 @@ $(document).ready(function() {
     function removeAbsentStudents() {
         var retrievedData = localStorage.getItem("absentStudents");
         absentStudents = JSON.parse(retrievedData);
-
         students = studentsFullList.clone();
-        //console.log('clone:');
-        //console.dir(students);
 
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
@@ -201,6 +199,10 @@ $(document).ready(function() {
         });
     }
 
+
+    /**
+     * Compare function to pass to sort()
+     */
     function compare(a, b) {
         if (a.name < b.name)
             return -1;
