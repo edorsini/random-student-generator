@@ -86,9 +86,17 @@ $(document).ready(function() {
      * Event listener: When `SAVE` button is clicked of absent form
      */
     $(".save-absent").click(function() {
-
+        var tempArray = [];
         alert("Save students that are absent");
         alert($('.studentName:checkbox:checked'));
+
+        $("input:checkbox:checked").each(function() {
+            tempArray.push($(this).val());
+        });
+
+        console.log(tempArray);
+
+        // save to local storage
     });
 
     /**
