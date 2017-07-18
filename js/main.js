@@ -157,8 +157,9 @@ $(document).ready(function() {
      * Populates the modal for setting students as absent
      */
     function populateAbsentModal() {
+        alert("gets here 1");
         for (var i = 0; i < students.length; i++) {
-            alert("gets here");
+            alert("gets here 2");
             $(".modal-body").append("<div class='absent-student'>" + students[i].name + "</div>");
         }
     }
