@@ -35,7 +35,6 @@ $(document).ready(function() {
             }
         }
 
-
         if (indexTemp < students.length) {
             console.log("indexTemp is: " + indexTemp);
 
@@ -80,12 +79,14 @@ $(document).ready(function() {
         }
 
         $(".img-circle").attr("src", "./images/" + student.image);
-
         $(".student-image").removeClass('hide');
         $(".thank-you").removeClass('hide');
     });
 
 
+    /**
+     * Get image from GIPHY API
+     */
     function getImageFromAPI() {
         var queryURL = "http://api.giphy.com/v1/gifs/search?q=developer&limit=1&api_key=dc6zaTOxFJmzC";
         $.ajax({
