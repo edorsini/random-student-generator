@@ -94,7 +94,7 @@ $(document).ready(function() {
         }).done(function(response) {
             console.log(response);
             var imageURL = response.data[0].images.original.url;
-            $(".img-circle").attr("src", student.image);
+            $(".img-circle").attr("src", imageURL);
         });
     }
 
