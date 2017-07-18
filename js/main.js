@@ -76,9 +76,10 @@ $(document).ready(function() {
         if (student.image === 'none') {
             alert("get image from API");
             student.image = getImageFromAPI();
+            $(".img-circle").attr("src", student.image);
+        } else {
+            $(".img-circle").attr("src", "./images/" + student.image);
         }
-
-        $(".img-circle").attr("src", "./images/" + student.image);
         $(".student-image").removeClass('hide');
         $(".thank-you").removeClass('hide');
     });
