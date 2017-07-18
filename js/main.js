@@ -199,6 +199,7 @@ $(document).ready(function() {
      * Populates the modal for setting students as absent
      */
     function populateAbsentModal() {
+        students.sort();
         for (var i = 0; i < students.length; i++) {
             $(".modal-body").append("<div class='absent-student'><li class='list-group-item'><div class='checkbox'><label><input class='studentName' type='checkbox' value='" + students[i].name + "'>" + students[i].name + "</label></div></li></div>");
         }
