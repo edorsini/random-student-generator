@@ -94,6 +94,7 @@ $(document).ready(function() {
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
                 if (students[i].name === absentStudents[j]) {
+                    console.log("remove: " + students[i].name);
                     students.splice(i, 1);
                     break;
                 }
