@@ -90,12 +90,11 @@ $(document).ready(function() {
 
 
         for (var i = 0; i < absentStudents.length; i++) {
-            const nameToRemove = absentStudents[i];
+            var nameToRemove = absentStudents[i];
             filteredStudents = students.filter((item) => item.name !== nameToRemove);
         }
 
         students = filteredStudents;
-
     }
 
     /**
