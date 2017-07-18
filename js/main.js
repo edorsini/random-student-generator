@@ -19,13 +19,28 @@ $(document).ready(function() {
         var numberOfTeams = parseInt(students.length / parseInt(numberPerTeam));
         console.log('number of teams: ' + numberOfTeams);
         var indexTemp = 0;
+        var bootstrapSize = 0;
+
+        switch (numberPerTeam) {
+            case 2:
+                bootstrapSize = 6;
+                break;
+            case 3:
+                bootstrapSize = 4;
+                break;
+            case 4:
+                bootstrapSize = 3;
+                break;
+            default:
+                bootstrapSize = 12;
+        }
 
         // shuffle students
         students.shuffle();
 
         // create <div> for each team within the .team-container <div>
         for (var i = 1; i <= numberOfTeams; i++) {
-            $(".teams-container").append("<div class='col-md-6'><div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div></div>");
+            $(".teams-container").append("<div class='col-md-" + bootstrapSize + "'><div class=' team-container team-" + (i) + "'><h2>Team " + (i) + "</h2></div></div>");
             // add students to each team
             for (var j = 0; j < numberPerTeam; j++) {
                 console.log("indexTemp: " + indexTemp);
