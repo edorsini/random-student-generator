@@ -98,7 +98,6 @@ $(document).ready(function() {
                     console.log("remove: " + nameToRemove);
                     var removedObject = students.splice(i, 1);
                     removedObject = null;
-                    break;
                 }
             }
         }
