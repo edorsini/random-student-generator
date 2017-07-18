@@ -88,7 +88,7 @@ $(document).ready(function() {
     $(".save-absent").click(function() {
         var tempArray = [];
         alert("Save students that are absent");
-        console.dir($('.studentName:checkbox:checked'));
+        //console.dir($('.studentName:checkbox:checked'));
 
         $("input:checkbox:checked").each(function() {
             tempArray.push($(this).val());
