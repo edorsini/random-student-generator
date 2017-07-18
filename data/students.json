@@ -2,7 +2,7 @@
     "students": [
     {
         "name": "Danny",
-        "image": "none"
+        "image": "danny.png"
     },
     {
         "name": "Kelsey",
@@ -14,7 +14,7 @@
     },
     {
         "name": "Pei",
-        "image": "none"
+        "image": "pei.png"
     },
     {
         "name": "David",
@@ -30,7 +30,7 @@
     },
     {
         "name": "Melissa",
-        "image": "none"
+        "image": "melissa.png"
     },
     {
         "name": "Robert",
@@ -46,7 +46,7 @@
     },
     {
         "name": "Don",
-        "image": "none"
+        "image": "don.png"
     },
     {
         "name": "Jamie",
@@ -62,7 +62,7 @@
     },
     {
         "name": "Ross",
-        "image": "none"
+        "image": "ross.png"
     },
     {
         "name": "Zack",
