@@ -73,7 +73,13 @@ $(document).ready(function() {
 
         $(".student-name").text(student.name);
         $(".student-name").removeClass('hide');
+
+        if (student.image === 'none') {
+            alert("get image from API");
+        }
+
         $(".img-circle").attr("src", "./images/" + student.image);
+
         $(".student-image").removeClass('hide');
         $(".thank-you").removeClass('hide');
     });

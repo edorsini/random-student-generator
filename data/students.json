@@ -1,53 +1,70 @@
 {
-    "students": [{
+    "students": [
+    {
         "name": "Danny",
-        "image": "danny.png"
-    }, {
+        "image": "none"
+    },
+    {
         "name": "Kelsey",
         "image": "kelsey.png"
-    }, {
+    },
+    {
         "name": "Mehdi",
         "image": "mehdi.png"
-    }, {
+    },
+    {
         "name": "Pei",
-        "image": "pei.png"
-    }, {
+        "image": "none"
+    },
+    {
         "name": "David",
         "image": "david.png"
-    }, {
+    },
+    {
         "name": "Hongsyn",
         "image": "hongsyn.jpeg"
-    }, {
+    },
+    {
         "name": "Kirk",
         "image": "kirk.jpeg"
-    }, {
+    },
+    {
         "name": "Melissa",
-        "image": "melissa.png"
-    }, {
+        "image": "none"
+    },
+    {
         "name": "Robert",
         "image": "robert.jpeg"
-    }, {
+    },
+    {
         "name": "Thomas",
         "image": "thomas.jpeg"
-    }, {
+    },
+    {
         "name": "Daniel",
         "image": "daniel.png"
-    }, {
+    },
+    {
         "name": "Don",
-        "image": "don.png"
-    }, {
+        "image": "none"
+    },
+    {
         "name": "Jamie",
         "image": "jamie.jpeg"
-    }, {
+    },
+    {
         "name": "Matthew",
         "image": "matthew.jpeg"
-    }, {
+    },
+    {
         "name": "Michael",
         "image": "michael.png"
-    }, {
+    },
+    {
         "name": "Ross",
-        "image": "ross.png"
-    }, {
+        "image": "none"
+    },
+    {
         "name": "Zack",
         "image": "zack.png"
     }],
