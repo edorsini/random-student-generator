@@ -91,15 +91,19 @@ $(document).ready(function() {
         //console.log('clone:');
         //console.dir(students);
 
+        vat newStudents = [];
+
         for (var i = 0; i < students.length; i++) {
             for (var j = 0; j < absentStudents.length; j++) {
-                if (students[i].name === absentStudents[j]) {
-                    console.log("remove: " + students[i].name);
-                    students.splice(i, 1);
+                if (students[i].name !== absentStudents[j]) {
+                    //console.log("remove: " + students[i].name);
+                    //students.splice(i, 1);
+                    newStudents.push(students[i]);
                     break;
                 }
             }
         }
+        students = newStudents;
         console.dir(students);
     }
 
